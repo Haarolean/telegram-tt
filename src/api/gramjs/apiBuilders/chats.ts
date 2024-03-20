@@ -176,7 +176,7 @@ function buildApiChatRestrictions(peerEntity: GramJs.TypeUser | GramJs.TypeChat)
 
   if (peerEntity instanceof GramJs.ChannelForbidden) {
     return {
-      isRestricted: true,
+      isRestricted: false,
     };
   }
 
@@ -189,7 +189,7 @@ function buildApiChatRestrictions(peerEntity: GramJs.TypeUser | GramJs.TypeChat)
 
     if (restrictionReason) {
       Object.assign(restrictions, {
-        isRestricted: true,
+        isRestricted: false,
         restrictionReason,
       });
     }

@@ -767,7 +767,7 @@ export function updater(update: Update) {
         '@type': 'updateChat',
         id: chatId,
         chat: {
-          isRestricted: true,
+          isRestricted: false,
         },
       });
 
